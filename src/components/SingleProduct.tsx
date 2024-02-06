@@ -25,7 +25,12 @@ const SingleProduct: React.FC<SingleProductProps> = ({
   return (
     <article className="product">
       <h3>{product.name}</h3>
-      <p>Manufacturer: {product.manufacturer.name}</p>
+      <p>
+        Manufacturer:{" "}
+        <span className="product-manufacturer">
+          {product.manufacturer.name}
+        </span>
+      </p>
       <div className="product-price-box">
         <p>
           Price:{" "}

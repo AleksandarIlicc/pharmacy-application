@@ -80,7 +80,7 @@ const NewProduct: React.FC = () => {
 
   return (
     <section className="edit-page section">
-      <h2 className="section-title">Edit product</h2>
+      <h2 className="section-title">Add new product</h2>
 
       <div className="edit-page-container">
         <form onSubmit={handleSubmit}>

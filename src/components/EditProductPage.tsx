@@ -18,7 +18,7 @@ const EditProductPage: React.FC = () => {
       name: "",
     }
   );
-  const [productPrice, setProductPrice] = useState<number>(0);
+  const [productPrice, setProductPrice] = useState<string>("0");
   const [productExpiryDate, setProductExpiryDate] = useState<Date>(new Date());
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const EditProductPage: React.FC = () => {
           id: fetchedProduct.manufacturer.id,
           name: fetchedProduct.manufacturer.name,
         });
-        setProductPrice(fetchedProduct.price);
+        setProductPrice(fetchedProduct.price.toString());
         setProductExpiryDate(fetchedProduct.expiryDate);
       }
     };
@@ -101,7 +101,7 @@ const EditProductPage: React.FC = () => {
                   name="price"
                   value={productPrice}
                   placeholder="Price"
-                  onChange={(e) => setProductPrice(Number(e.target.value))}
+                  onChange={(e) => setProductPrice(e.target.value)}
                 />
               </div>
 

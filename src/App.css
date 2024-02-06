@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  list-style: none;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section {
+  padding: 2rem 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgb(31, 31, 31);
+}
+
+.side-bar ul li {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.home-page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.product {
+  padding: 1rem;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+.product > * + * {
+  margin-top: 1rem;
+}
+
+.product-price-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-btns {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.btn {
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn--new-product {
+  background-color: rgb(119, 164, 57);
+}
+
+.btn--edit {
+  background-color: rgb(57, 86, 164);
+  margin-right: 1rem;
+}
+
+.btn--delete {
+  background-color: rgb(164, 71, 57);
+}
+
+.pharmacy-bar-chart {
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+.pharmacy-pie-chart {
+  width: 50%;
+}
+
+.pharmacy-bar-chart h3,
+.pharmacy-pie-chart h3 {
+  margin-bottom: 2rem;
+}
+
+.edit-page-container {
+  margin-top: 8rem;
+}
+
+.edit-product {
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.about-page .about-page-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.about-page .about-page-container .about-page-info {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-page .about-page-container .about-page-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-page .about-page-info * + * {
+  margin-top: 1.2rem;
+}
+
+.about-page .about-page-info span {
+  font-weight: 700;
+}
+
+.about-page-version {
+  font-weight: 700;
+}
+
+.input-box input {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgb(199, 199, 199);
+  outline: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .about-page .about-page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 }

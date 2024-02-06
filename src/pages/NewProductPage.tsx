@@ -5,7 +5,7 @@ import productService, {
   IProduct,
 } from "../service/ProductService";
 
-const NewProduct: React.FC = () => {
+const NewProductPage: React.FC = () => {
   let lastProductIndex = -1;
   let newProductId = "";
   let newProductManufacturerId = "";
@@ -137,4 +137,4 @@ const NewProduct: React.FC = () => {
   );
 };
 
-export default NewProduct;
+export default NewProductPage;

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import PharmacyBarChart from "./PharmacyBarChart";
-import PharmacyPieChart from "./PharmacyPieChart";
+import PharmacyBarChart from "../components/PharmacyBarChart";
+import PharmacyPieChart from "../components/PharmacyPieChart";
 import ProductService, { IProduct } from "service/ProductService";
 
-const Statistics: React.FC = () => {
+const StatisticsPage: React.FC = () => {
   const [products, setProducts] = useState<IProduct[]>(
     ProductService.getAllProducts()
   );
@@ -24,4 +24,4 @@ const Statistics: React.FC = () => {
   );
 };
 
-export default Statistics;
+export default StatisticsPage;

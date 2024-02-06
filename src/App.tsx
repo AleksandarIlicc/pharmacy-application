@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import SideBar from "./components/SideBar";
-import HomePage from "./components/HomePage";
-import AboutPage from "./components/AboutPage";
-import EditProductPage from "./components/EditProductPage";
-import NewProduct from "./components/NewProduct";
-import Statistics from "./components/Statistics";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import StatisticsPage from "./pages/StatisticsPage";
+import EditProductPage from "./pages/EditProductPage";
+import NewProductPage from "./pages/NewProductPage";
 
 import "./App.css";
 
@@ -18,8 +18,8 @@ function App(): JSX.Element {
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="about" element={<AboutPage />}></Route>
-          <Route path="statistics" element={<Statistics />}></Route>
-          <Route path="/new-product" element={<NewProduct />}></Route>
+          <Route path="statistics" element={<StatisticsPage />}></Route>
+          <Route path="/new-product" element={<NewProductPage />}></Route>
           <Route path="edit-product/:id" element={<EditProductPage />}></Route>
         </Routes>
       </BrowserRouter>

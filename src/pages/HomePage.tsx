@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Products from "./Products";
+import Products from "../components/Products";
 
 const HomePage: React.FC = () => {
   return (
